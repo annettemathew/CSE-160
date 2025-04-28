@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+ 
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <br>
+
+    <p>
+      Chicken head <input type="range" min="-45" max ="45" value = "0" class="slider" id="headSlide">
+
+    Chicken head animation:
+    <button type="button" id="animationHeadOnButton">ON</button>
+    <button type="button" id="animationHeadOffButton">OFF</button>
+
+    <p>
+      Chicken top beak <input type="range" min="-45" max ="0" value = "0" class="slider" id="topBeakSlide">
+
+    <p>
+      Chicken bottom beak <input type="range" min="0" max ="45" value = "0" class="slider" id="bottomBeakSlide">
+
+    Beak animation:
+    <button type="button" id="animationBeakOnButton">ON</button>
+    <button type="button" id="animationBeakOffButton">OFF</button>
+
+    Jump Animation:
+    <button type="button" id="animationJumpOnButton">ON</button>
+    <button type="button" id="animationJumpOffButton">OFF</button>
+
+    <p> 
+      Camera Angle <input type="range" min = "-90" max="90" value="0" class="slider" id="angleSlide">      
+    
+   
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Egg.js"></script>
+    <script src="Stats.js"></script>
+    <script src="BlockyAnimal.js"></script>
+  </body>
+</html>
