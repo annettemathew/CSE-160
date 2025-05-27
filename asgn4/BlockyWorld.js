@@ -766,7 +766,7 @@ function renderAllShapes() {
     bunny.matrix.translate(2, -0.75, 0);  // Position on the floor
     bunny.matrix.rotate(g_seconds * 50, 0, 1, 0); // Rotate over time
     bunny.matrix.scale(0.5, 0.5, 0.5); // Scale down if needed
-    bunny.render(gl.program);
+    //bunny.render(gl.program);
   }
   
   
