@@ -753,7 +753,7 @@ function renderAllShapes() {
   head.matrix.scale(0.3/0.25, 0.3/0.7, 0.3/0.5);
   head.matrix.translate(-.5, 0, -0.001);
   head.renderNormal();
-  console.log(gl.program.a_Position);
+  //console.log(gl.program.a_Position);
   // In your main() or initialization code:
   let bunny = new Model(gl, "bunny.obj", (model) => {
     console.log("Bunny model ready to render!");
