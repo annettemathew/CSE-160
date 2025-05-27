@@ -99,7 +99,7 @@ class OBJLoader {
             const fileContent = await response.text();
 
             let result = await this.parse(fileContent, 1.0, true);
-            console.log("result not null");
+            //console.log("result not null");
             if (!result) throw new Error(`Something went wrong parsing the .obj file.`);
 
             // if the model is too big, indices.length needs to be a uint32 array. to get access to gl.UNSIGNED_INT, we need to enable this extension
@@ -223,10 +223,10 @@ class OBJLoader {
     isMTLComplete() {
         if (this.mtls.length == 0) return true;
         for (let i = 0; i < this.mtls.length; i++) {
-            console.log("MTL");
+            //console.log("MTL");
             if (!this.mtls[i].complete) return false;
         }
-        console.log("hi");
+        //console.log("hi");
         return true;
     }
 
@@ -311,7 +311,7 @@ class OBJLoader {
 
     // wrapper property with an easier to remember name
     get isFullyLoaded() {
-        console.log("is fully parsed, ", this.isOBJFullyParsed);
+        //console.log("is fully parsed, ", this.isOBJFullyParsed);
         return this.isOBJFullyParsed && this.isMTLComplete();
     }
 
