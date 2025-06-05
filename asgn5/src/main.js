@@ -14,7 +14,7 @@ import {
   GodRaysDepthMaskShader, 
   GodRaysGenerateShader, 
   GodRaysCombineShader 
-} from 'three/examples/jsm/shaders/GodRaysShader.js';
+} from 'three/addons/shaders/GodRaysShader.js';
 import { DragControls } from 'three/addons/controls/DragControls.js';
 import { TDSLoader } from 'three/addons/loaders/TDSLoader.js';
 import { VolumetricCloud } from './VolumetricCloud.js';  // Adjust path as needed
