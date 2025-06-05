@@ -193,7 +193,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
     
 
   const gltfLoader = new GLTFLoader();
-  const url = '/Grassy_mountain_002/mountain_grass.gltf';
+  const url = '/public/Grassy_mountain_002/mountain_grass.gltf';
   gltfLoader.load(url, (gltf) => {
     const root = gltf.scene;
     root.scale.set(5, 5, 5);
