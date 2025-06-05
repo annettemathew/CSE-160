@@ -76,12 +76,12 @@ function main() {
 
   const bgLoader = new THREE.CubeTextureLoader();
     const texture = bgLoader.load( [
-      '/right.jpg',
-      '/left.jpg',
-      '/top.jpg',
-      '/bottom.jpg',
-      '/front.jpg',
-      '/back.jpg',
+      '../asgn5/public/right.jpg',
+      '../asgn5/public/left.jpg',
+      '../asgn5/public/top.jpg',
+      '../asgn5/public/bottom.jpg',
+      '../asgn5/public/front.jpg',
+      '../asgn5/public/back.jpg',
     ] );
     scene.background = texture;
 
@@ -255,7 +255,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
 }
 
   const doorTextureLoader = new THREE.TextureLoader();
-  const doorTexture = doorTextureLoader.load('doorTextures/Door_C.jpg', animate); // `animate` optional
+  const doorTexture = doorTextureLoader.load('../asgn5/public/doorTextures/Door_C.jpg', animate); // `animate` optional
   doorTexture.colorSpace = THREE.SRGBColorSpace;
 
   const cloud = new VolumetricCloud();
@@ -263,7 +263,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
   scene.add(cloud);
   
   const objLoader = new OBJLoader();
-  objLoader.load('/Door_Component_BI3.obj', (root) => {
+  objLoader.load('../asgn5/public/Door_Component_BI3.obj', (root) => {
     root.traverse((child) => {
       if (child.isMesh) {
         // Apply a material with the texture
@@ -288,11 +288,11 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
   });
   
   const wineTextureLoader = new THREE.TextureLoader();
-  const wineTexture = wineTextureLoader.load('43-wine_bottle_obj/Wine_bottle.mtl', animate); // `animate` optional
+  const wineTexture = wineTextureLoader.load('../asgn5/public/43-wine_bottle_obj/Wine_bottle.mtl', animate); // `animate` optional
   wineTexture.colorSpace = THREE.SRGBColorSpace;
   
   const bottleLoader = new OBJLoader();
-  bottleLoader.load('/43-wine_bottle_obj/Wine_bottle.obj', (root) => {
+  bottleLoader.load('../asgn5/public/43-wine_bottle_obj/Wine_bottle.obj', (root) => {
     root.traverse((child) => {
       if (child.isMesh) {
         // Apply a material with the texture
@@ -330,7 +330,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
 
 
   const tableGltfLoader = new GLTFLoader();
-  const tableUrl = '/wooden_tablechair__low-poly__game-ready/scene.gltf';
+  const tableUrl = '../asgn5/public/wooden_tablechair__low-poly__game-ready/scene.gltf';
   tableGltfLoader.load(tableUrl, (gltf) => {
     const root = gltf.scene;
     root.scale.set(0.7, 0.7, 0.7);
@@ -340,7 +340,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
 
 
   const pomGltfLoader = new GLTFLoader();
-  const pomUrl = '/pomni_from_the_amazing_digital_circus/scene.gltf';
+  const pomUrl = '../asgn5/public/pomni_from_the_amazing_digital_circus/scene.gltf';
   pomGltfLoader.load(pomUrl, (gltf) => {
       const root = gltf.scene;
       root.scale.set(0.7, 0.7, 0.7);
@@ -399,7 +399,7 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
   }
 
   const gummiGltfLoader = new GLTFLoader();
-  const gumUrl = '/gummigoo/scene.gltf';
+  const gumUrl = '../asgn5/public/gummigoo/scene.gltf';
   gummiGltfLoader.load(gumUrl, (gltf) => {
     const root = gltf.scene;
     root.scale.set(0.003, 0.003, 0.003);
@@ -435,12 +435,12 @@ fogGUI.add(fog, 'far', 10, 200).name('Fog End').onChange(val => {
 
 
   const textureLoader = new THREE.TextureLoader();
-  const alphaMap = textureLoader.load('/textures/alpha_radial_gradient.png');
+  const alphaMap = textureLoader.load('../asgn5/public/textures/alpha_radial_gradient.png');
   alphaMap.wrapS = THREE.ClampToEdgeWrapping;
   alphaMap.wrapT = THREE.ClampToEdgeWrapping;
   alphaMap.colorSpace = THREE.SRGBColorSpace;  // optional depending on map type
 
-  textureLoader.load('/Water_1_M_Flow.jpg', function(flowMap) {
+  textureLoader.load('../asgn5/public/Water_1_M_Flow.jpg', function(flowMap) {
 //    const waterGeometry = new THREE.PlaneGeometry(20, 20, 128, 128);
 const waterGeometry = new THREE.PlaneGeometry(20, 20);
     water = new Water(waterGeometry, {
